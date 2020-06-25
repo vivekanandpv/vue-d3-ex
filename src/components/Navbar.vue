@@ -7,5 +7,7 @@
     <router-link to="/news" exact>News</router-link>
     <br />
     <router-link to="/contact" exact>Contact</router-link>
+    <br />
+    <router-link to="/djddjdjd" exact>Gibberish</router-link>
   </div>
 </template>

@@ -2,6 +2,7 @@ import Home from '../components/Home.vue';
 import About from '../components/About.vue';
 import News from '../components/News.vue';
 import Contact from '../components/Contact.vue';
+import NotFound from '../components/NotFound.vue';
 
 const routes = [
   {
@@ -19,6 +20,10 @@ const routes = [
   {
     path: '/contact',
     component: Contact,
+  },
+  {
+    path: '*',
+    component: NotFound,
   },
 ];
 
