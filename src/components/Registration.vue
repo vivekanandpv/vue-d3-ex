@@ -3,6 +3,9 @@
     <h3>Registration Form</h3>
     <hr />
     <form @submit.prevent="onSubmit">
+      <ul v-if="errors.length > 0" class="text-danger">
+        <li v-for="(err, index) in errors" :key="index">{{ err }}</li>
+      </ul>
       <div class="form-group">
         <label>Name</label>
         <input type="text" class="form-control" v-model="form.name" />
@@ -33,6 +36,9 @@
         </select>
       </div>
       <button class="btn btn-primary mt-4">Submit</button>
+      <button class="btn btn-secondary mt-4 ml-4" type="button" @click="reset">
+        Reset
+      </button>
     </form>
   </div>
 </template>
@@ -48,17 +54,54 @@ export default {
         language: '',
       },
       languages: ['English', 'Hindi', 'French', 'Russian', 'German'],
+      errors: [],
     };
   },
   methods: {
+    validate() {
+      let status = true;
+
+      if (!this.form.name) {
+        this.errors.push('Name is required');
+        status = false;
+      }
+
+      if (!this.form.language) {
+        this.errors.push('Language is required');
+        status = false;
+      }
+
+      if (status) {
+        while (this.errors.length > 0) {
+          this.errors.pop();
+        }
+      }
+
+      return status;
+    },
+    reset() {
+      this.form.name = '';
+      this.form.phone = '';
+      this.form.newsletter = false;
+      this.form.language = '';
+
+      while (this.errors.length > 0) {
+        this.errors.pop();
+      }
+    },
     onSubmit() {
+      if (!this.validate()) {
+        return;
+      }
       const formData = {
         name: this.form.name,
         phone: this.form.phone,
         newsletter: this.form.newsletter,
         language: this.form.language,
       };
+
       console.log('Form', formData);
+      alert('Successful!');
     },
   },
 };
