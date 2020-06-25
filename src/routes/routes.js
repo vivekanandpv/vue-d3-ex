@@ -16,14 +16,17 @@ const routes = [
   {
     path: '/news',
     component: News,
+    props: true,
     children: [
       {
         path: ':city',
         component: News,
+        props: true,
       },
       {
         path: ':city/:year',
         component: News,
+        props: true,
       },
     ],
   },
