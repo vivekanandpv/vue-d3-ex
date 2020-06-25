@@ -1,0 +1,3 @@
+<template>
+  <h3>Navbar</h3>
+</template>
