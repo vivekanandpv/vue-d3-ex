@@ -30,10 +30,16 @@ const routes = [
       },
     ],
   },
-
   {
+    //contact and bar point to same component
     path: '/contact',
     component: Contact,
+    alias: '/bar',
+  },
+  {
+    //foo will direct to about
+    path: '/foo',
+    redirect: '/about',
   },
   {
     path: '*',

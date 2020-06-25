@@ -45,6 +45,16 @@
               <span>Contact</span>
             </router-link>
           </li>
+          <li class="nav-item">
+            <router-link to="/bar" exact class="nav-link">
+              <span>Bar (alias)</span>
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/foo" exact class="nav-link">
+              <span>Foo (redirection)</span>
+            </router-link>
+          </li>
         </ul>
       </div>
     </nav>
