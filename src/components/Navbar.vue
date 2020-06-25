@@ -45,6 +45,11 @@
               <span>Contact</span>
             </router-link>
           </li>
+          <li class="nav-item">
+            <router-link to="/registration" exact class="nav-link">
+              <span>Registration</span>
+            </router-link>
+          </li>
         </ul>
       </div>
     </nav>
