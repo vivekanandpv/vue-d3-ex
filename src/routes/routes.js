@@ -16,15 +16,18 @@ const routes = [
   {
     path: '/news',
     component: News,
+    children: [
+      {
+        path: ':city',
+        component: News,
+      },
+      {
+        path: ':city/:year',
+        component: News,
+      },
+    ],
   },
-  {
-    path: '/news/:city',
-    component: News,
-  },
-  {
-    path: '/news/:city/:year',
-    component: News,
-  },
+
   {
     path: '/contact',
     component: Contact,
