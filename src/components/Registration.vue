@@ -2,7 +2,7 @@
   <div>
     <h3>Registration Form</h3>
     <hr />
-    <form>
+    <form @submit.prevent="onSubmit">
       <div class="form-group">
         <label>Name</label>
         <input type="text" class="form-control" v-model="form.name" />
@@ -49,6 +49,17 @@ export default {
       },
       languages: ['English', 'Hindi', 'French', 'Russian', 'German'],
     };
+  },
+  methods: {
+    onSubmit() {
+      const formData = {
+        name: this.form.name,
+        phone: this.form.phone,
+        newsletter: this.form.newsletter,
+        language: this.form.language,
+      };
+      console.log('Form', formData);
+    },
   },
 };
 </script>
