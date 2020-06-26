@@ -23,10 +23,10 @@ export default {
   },
   methods: {
     like() {
-      this.$store.commit('like');
+      this.$store.commit('like', 3);
     },
     dislike() {
-      this.$store.commit('dislike');
+      this.$store.commit('dislike', 5);
     },
   },
 };

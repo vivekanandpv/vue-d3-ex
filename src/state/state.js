@@ -9,11 +9,11 @@ export const store = new Vuex.Store({
     dislikes: 0,
   },
   mutations: {
-    like(state) {
-      ++state.likes;
+    like(state, count) {
+      state.likes += count;
     },
-    dislike(state) {
-      ++state.dislikes;
+    dislike(state, count) {
+      state.dislikes += count;
     },
   },
 });
