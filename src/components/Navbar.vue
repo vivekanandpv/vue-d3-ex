@@ -10,7 +10,7 @@
           alt=""
           loading="lazy"
         />
-        Vue.js Learning
+        Vue.js Learning 👍 {{ likes }} 👎 {{ dislikes }}
       </a>
       <button
         class="navbar-toggler"
@@ -50,3 +50,16 @@
     </nav>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    likes() {
+      return this.$store.state.likes;
+    },
+    dislikes() {
+      return this.$store.state.dislikes;
+    },
+  },
+};
+</script>
