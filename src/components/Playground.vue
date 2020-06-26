@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>Playground: Users</h3>
-    <table class="table table-striped">
+    <table class="table table-striped" v-if="users.length > 0">
       <thead>
         <tr>
           <th>ID</th>
