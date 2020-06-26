@@ -8,17 +8,16 @@
 <script>
 import { http } from '../lib/http';
 export default {
-  created() {
-    //    at this point, the component is created in the v-dom
-    //    right place to call external apis for initial data
-    http
-      .get(`users?page=2`)
-      .then((r) => {
-        console.log('Server', r);
-      })
-      .catch((err) => {
-        console.log('Error', err);
-      });
+  //    we can make use of the new async/await from ES6
+  //    this requires the build toolchain
+  //    more info: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+  async created() {
+    try {
+      const data = await http.get(`users?page=2`);
+      console.log('Server', data);
+    } catch (error) {
+      console.log('Error', error);
+    }
   },
 };
 </script>
