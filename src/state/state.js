@@ -13,7 +13,7 @@ export const store = new Vuex.Store({
       ++state.likes;
     },
     dislike(state) {
-      --state.likes;
+      ++state.dislikes;
     },
   },
 });
