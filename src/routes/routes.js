@@ -36,6 +36,10 @@ const routes = [
     component: Contact,
   },
   {
+    path: '/playground',
+    component: () => import('../components/Playground.vue'),
+  },
+  {
     path: '*',
     component: NotFound,
   },

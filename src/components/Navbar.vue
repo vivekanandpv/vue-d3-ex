@@ -41,6 +41,11 @@
             </router-link>
           </li>
           <li class="nav-item">
+            <router-link to="/playground" exact class="nav-link">
+              <span>Playground</span>
+            </router-link>
+          </li>
+          <li class="nav-item">
             <router-link to="/contact" exact class="nav-link">
               <span>Contact</span>
             </router-link>
