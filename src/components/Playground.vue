@@ -22,11 +22,13 @@ export default {
     },
   },
   methods: {
+    //  it's like working with a service as in Spring
+
     like() {
-      this.$store.commit('like', 3);
+      this.$store.dispatch('likeAsync', 3);
     },
     dislike() {
-      this.$store.commit('dislike', 5);
+      this.$store.dispatch('dislikeAsync', 5);
     },
   },
 };
