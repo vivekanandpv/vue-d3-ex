@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --prod",
     "lint": "vue-cli-service lint",
-    "build:docker": "vue-cli-service build && docker build --no-cache -t vue-training-app ."
+    "build:docker": "vue-cli-service build --prod && docker build --no-cache -t vue-training-app-2 ."
   },
   "dependencies": {
     "core-js": "^3.6.5",
